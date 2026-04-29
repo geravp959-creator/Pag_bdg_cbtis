@@ -25,32 +25,26 @@
     * { box-sizing: border-box; }
 
     body {
-      margin: 0;
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      color: var(--text-light);
-
-      background: var(--custom-bg) center/cover fixed no-repeat;
-    }
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background: url('fondo.png') center/cover no-repeat fixed;
+}
 
     
     .overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.55);
+      background: rgba(0, 0, 0, 0.35);
       backdrop-filter: blur(2px);
       z-index: -1;
     }
 
     header {
-      background: var(--maroon);
-      padding: 1.5rem;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-    }
-
+  background: rgba(123, 13, 41, 0.85);
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid #9d1435;
+}
     main {
       max-width: 1100px;
       margin: auto;
@@ -61,18 +55,19 @@
     }
 
     section {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 1.5rem;
-      border-radius: 12px;
-      backdrop-filter: blur(4px);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
     section h2 {
       margin-top: 0;
       color: var(--maroon-light);
     }
-
+    section:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -142,16 +137,13 @@ nav a:hover {
   padding: 5px;
 }
 button {
-  background: #7b0d29;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  background: linear-gradient(45deg, #7b0d29, #9d1435);
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 button:hover {
-  background: #9d1435;
+  transform: scale(1.1);
 }
 .btn-unirme {
   display: block;
